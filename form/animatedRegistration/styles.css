@@ -1,1 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --clr-animated: #0ab3ff;
+    --bg: #1c2630;
+    --bg-2: #29313c;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+form {
+    background: var(--bg-2);
+    padding: 60px 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+    border-bottom: 2px solid var(--clr-animated);
+}
+
+.inputBox input[type="submit"] {
+    background: var(--clr-animated);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: var(--back);
+    font-weight: 600;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputBox input[type='submit']:hover {
+    letter-spacing: 0.35em;
+}
+
+form p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+form p a {
+    color: var(--clr-animated);
+    font-weight: 500;
+    text-decoration: none;
+}
+

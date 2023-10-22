@@ -68,6 +68,19 @@ form h2 {
     text-transform: uppercase;
 }
 
+.inputBox label span {
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+
+.inputBox input:focus ~ label span,
+.inputBox input:valid ~ label span {
+    color: var(--clr-animated);
+    letter-spacing: 0.15em;
+}
+
 .inputBox input:focus,
 .inputBox input:valid {
     border-bottom: 2px solid var(--clr-animated);

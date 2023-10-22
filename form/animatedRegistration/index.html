@@ -9,7 +9,7 @@
     <title>Animated form registration</title>
 </head>
 <body>
-<form action="">
+<form>
     <h2>New account</h2>
     <div class="inputBox">
         <input type="text" required>
@@ -21,20 +21,21 @@
     </div>
     <div class="inputBox">
         <input type="password" required>
-        <label>Create Password</label>
+        <label>Create &nbsp Password</label>
     </div>
     <div class="inputBox">
         <input type="password" required>
-        <label>Confirm Password</label>
+        <label>Confirm &nbsp Password</label>
     </div>
     <div class="inputBox">
         <input type="submit" value="Create">
     </div>
     <p>Already have an account ? <a href="#">Login</a></p>
 </form>
+<!--suppress JSVoidFunctionReturnValueUsed -->
 <script>
-    let label = document.querySelectorAll('label').forEach(label => {
-        label.innerHTML = label.innerText.split('').map((letters, i) => '<span style="transition-delay: $ {i * 50}ms">$ {letters}</span>').join('');
-    })
+    let label = document.querySelectorAll( 'label' ).forEach( label => {
+        label.innerHTML = label.innerText.split( '' ).map( ( letters, i ) => `<span style='transition-delay:$ {i * 50}ms'>$ { letters }</span>` ).join( '' );
+    } )
 </script>
 </body>
